@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: pt-br
+uuid: 56a5eb70-1ea2-4055-b4c5-f05132e3b26c
+name: Book4Project
+mail: admin@nyx.tc
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: pt-br

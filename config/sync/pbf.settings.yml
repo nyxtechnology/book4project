@@ -1,0 +1,8 @@
+_core:
+  default_config_hash: 1R1X1UvfkWtx6yddoRgpgGqAI3M27YGM96gBrCONV8c
+langcode: pt-br
+pbf_roles_gids:
+  anonymous: 1
+  authenticated: 2
+  content_editor: 3
+  administrator: 4
