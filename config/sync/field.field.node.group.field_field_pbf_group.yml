@@ -1,0 +1,28 @@
+uuid: e62b2d23-c650-4248-9251-356f7a17bdd8
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_field_pbf_group
+    - node.type.group
+  module:
+    - pbf
+id: node.group.field_field_pbf_group
+field_name: field_field_pbf_group
+entity_type: node
+bundle: group
+label: field_pbf_group
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+  priority: 0
+  user_method: user
+  synchronized_with: ''
+  synchronized_by: ''
+  synchronized_from_target: 0
+field_type: pbf

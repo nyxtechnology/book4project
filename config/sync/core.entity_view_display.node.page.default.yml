@@ -4,8 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_field_pbf_page
+    - field.field.node.page.field_page_image
     - node.type.page
   module:
+    - image
+    - pbf
     - text
     - user
 _core:
@@ -20,10 +24,31 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
+    region: content
+  field_field_pbf_page:
+    type: pbf_formatter_default
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_page_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
     region: content
   links:
-    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   langcode: true

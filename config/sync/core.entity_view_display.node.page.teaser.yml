@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.field_field_pbf_page
+    - field.field.node.page.field_page_image
     - node.type.page
   module:
     - text
@@ -28,4 +30,6 @@ content:
     weight: 101
     region: content
 hidden:
+  field_field_pbf_page: true
+  field_page_image: true
   langcode: true
