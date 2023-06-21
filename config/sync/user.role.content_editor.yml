@@ -9,6 +9,7 @@ dependencies:
   module:
     - comment
     - contextual
+    - field_permissions
     - file
     - node
     - path
@@ -31,6 +32,7 @@ permissions:
   - 'access tour'
   - 'administer url aliases'
   - 'create article content'
+  - 'create field_field_pbf_page'
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
@@ -38,11 +40,14 @@ permissions:
   - 'delete own article content'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'edit field_field_pbf_page'
   - 'edit own article content'
   - 'edit own comments'
+  - 'edit own field_field_pbf_page'
   - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'view all revisions'
+  - 'view own field_field_pbf_page'
   - 'view own unpublished content'
   - 'view the administration theme'

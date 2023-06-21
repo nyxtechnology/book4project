@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_field_pbf_page
+    - node.type.group
     - node.type.page
   content:
-    - 'node:page:775455df-8a05-4f01-b2bd-415c08790fc8'
+    - 'node:group:474003db-d94b-4e39-9f19-ae8c2514f88b'
+    - 'node:group:4c86edb8-91fe-4cbf-b35a-63a78275b38e'
+    - 'node:group:bac3c118-3522-4ad3-99ee-5eda49897cb9'
   module:
     - pbf
 id: node.page.field_field_pbf_page
@@ -19,7 +22,19 @@ required: false
 translatable: false
 default_value:
   -
-    target_uuid: 775455df-8a05-4f01-b2bd-415c08790fc8
+    target_uuid: 4c86edb8-91fe-4cbf-b35a-63a78275b38e
+    grant_public: 0
+    grant_view: 1
+    grant_update: 1
+    grant_delete: 0
+  -
+    target_uuid: 474003db-d94b-4e39-9f19-ae8c2514f88b
+    grant_public: 0
+    grant_view: 1
+    grant_update: 1
+    grant_delete: 0
+  -
+    target_uuid: bac3c118-3522-4ad3-99ee-5eda49897cb9
     grant_public: 0
     grant_view: 1
     grant_update: 0
@@ -29,12 +44,13 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
+      group: group
       page: page
     sort:
-      field: _none
+      field: title
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: group
   priority: 0
   user_method: user
   synchronized_with: ''

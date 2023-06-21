@@ -1,18 +1,18 @@
-uuid: e62b2d23-c650-4248-9251-356f7a17bdd8
+uuid: 12a547bd-33eb-4577-8d1f-c0d867c1eddf
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.storage.node.field_field_pbf_group
+    - field.storage.user.field_pbf_user
     - node.type.group
-    - node.type.page
   module:
     - pbf
-id: node.group.field_field_pbf_group
-field_name: field_field_pbf_group
-entity_type: node
-bundle: group
-label: field_pbf_group
+    - user
+id: user.user.field_pbf_user
+field_name: field_pbf_user
+entity_type: user
+bundle: user
+label: Permissões
 description: ''
 required: false
 translatable: false
@@ -22,7 +22,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      page: page
+      group: group
     sort:
       field: title
       direction: ASC
