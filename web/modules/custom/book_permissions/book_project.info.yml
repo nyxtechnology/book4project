@@ -1,0 +1,5 @@
+name: Book Permissions
+type: module
+description: Módulo para gerenciar as permissões de usuário.
+core_version_requirement: ^9
+package: Book4Project
