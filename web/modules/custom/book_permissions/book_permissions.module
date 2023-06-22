@@ -1,6 +1,6 @@
 <?php
 
-function book_project_form_alter($form, $form_state, $form_id) {
+function book_permissions_form_alter(&$form, $form_state, $form_id) {
 
   if (array_key_exists('field_pbf_group', $form)) {
     $widget = $form['field_pbf_group']['widget'];
@@ -35,7 +35,7 @@ function book_project_form_alter($form, $form_state, $form_id) {
     }
   }
   if (array_key_exists('field_pbf_role', $form)) {
-    $widget = $form['field_pbf_ref_role']['widget'];
+    $widget = $form['field_pbf_role']['widget'];
     foreach ($widget as $key => $item) {
 
       if (is_numeric($key)) {
