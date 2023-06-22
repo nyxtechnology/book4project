@@ -3,7 +3,7 @@ langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.field.user.user.field_pbf_user
+    - field.field.user.user.field_pbf_group
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -17,7 +17,7 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  field_pbf_user:
+  field_pbf_group:
     type: pbf_formatter_default
     label: above
     settings:

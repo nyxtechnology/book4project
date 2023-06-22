@@ -4,10 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.group.body
-    - field.field.node.group.field_field_pbf_group
     - node.type.group
   module:
-    - pbf
     - text
     - user
 id: node.group.default
@@ -21,14 +19,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
-    region: content
-  field_field_pbf_group:
-    type: pbf_formatter_default
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 102
     region: content
   links:
     settings: {  }

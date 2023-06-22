@@ -9,7 +9,6 @@ dependencies:
   module:
     - comment
     - contextual
-    - field_permissions
     - file
     - node
     - path
