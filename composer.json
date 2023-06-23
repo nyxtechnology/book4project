@@ -1,6 +1,6 @@
 {
-    "name": "nyxtechnology/drupal-project",
-    "description": "Project template for Drupal 9 projects with composer and Docker",
+    "name": "nyxtechnology/book4project",
+    "description": "Nyx docs project template on Drupal",
     "type": "project",
     "license": "MIT",
     "authors": [
