@@ -46,8 +46,8 @@ function book_permissions_form_alter(&$form, $form_state, $form_id) {
           $item['grant_public']['#access'] = FALSE;
           $item['grant_view']['#default_value'] = 1;
           $item['grant_view']['#access'] = TRUE;
-          $item['grant_update']['#default_value'] = 0;
-          $item['grant_update']['#access'] = FALSE;
+          $item['grant_update']['#default_value'] = 1;
+          $item['grant_update']['#access'] = TRUE;
           $item['grant_delete']['#default_value'] = 0;
           $item['grant_delete']['#access'] = FALSE;
           $form['field_pbf_role']['widget'][$key] = $item;
@@ -58,7 +58,7 @@ function book_permissions_form_alter(&$form, $form_state, $form_id) {
           $item['grant_public']['#access'] = FALSE;
           $item['grant_view']['#default_value'] = 1;
           $item['grant_view']['#access'] = TRUE;
-          $item['grant_update']['#default_value'] = 0;
+          $item['grant_update']['#default_value'] = 1;
           $item['grant_update']['#access'] = TRUE;
           $item['grant_delete']['#default_value'] = 0;
           $item['grant_delete']['#access'] = FALSE;
