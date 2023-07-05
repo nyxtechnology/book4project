@@ -1,0 +1,51 @@
+uuid: d324b64d-6591-41db-bb13-92c5fbe1d0d9
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pbf_role
+    - node.type.page
+    - user.role.administrator
+    - user.role.anonymous
+    - user.role.content_editor
+  module:
+    - pbf
+id: node.page.field_pbf_role
+field_name: field_pbf_role
+entity_type: node
+bundle: page
+label: 'Permissões role'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 87fdf33c-6a3c-446e-bf80-20c725ec82a3
+    grant_public: 0
+    grant_view: 0
+    grant_update: 0
+    grant_delete: 0
+  -
+    target_uuid: bdbcb730-5c23-4d07-847e-58643fc25240
+    grant_public: 0
+    grant_view: 1
+    grant_update: 1
+    grant_delete: 0
+  -
+    target_uuid: 4c422e90-1551-4e74-81d0-1b2cd3d55453
+    grant_public: 0
+    grant_view: 1
+    grant_update: 1
+    grant_delete: 1
+default_value_callback: ''
+settings:
+  handler: 'default:user_role'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+  priority: 0
+  user_method: user
+  synchronized_with: ''
+  synchronized_by: ''
+  synchronized_from_target: 0
+field_type: pbf

@@ -1,0 +1,70 @@
+<?php
+
+function book_permissions_form_alter(&$form, $form_state, $form_id) {
+
+  if (array_key_exists('field_pbf_group', $form)) {
+    $widget = $form['field_pbf_group']['widget'];
+    foreach ($widget as $key => $item) {
+      if (is_numeric($key)) {
+        $item['grant_public']['#default_value'] = 0;
+        $item['grant_public']['#access'] = FALSE;
+        $item['grant_view']['#default_value'] = 0;
+        $item['grant_view']['#access'] = TRUE;
+        $item['grant_update']['#default_value'] = 0;
+        $item['grant_update']['#access'] = TRUE;
+        $item['grant_delete']['#default_value'] = 0;
+        $item['grant_delete']['#access'] = FALSE;
+        $form['field_pbf_group']['widget'][$key] = $item;
+      }
+    }
+  }
+  if (array_key_exists('field_pbf_user', $form)) {
+    $widget = $form['field_pbf_user']['widget'];
+    foreach ($widget as $key => $item) {
+      if (is_numeric($key)) {
+        $item['grant_public']['#default_value'] = 0;
+        $item['grant_public']['#access'] = FALSE;
+        $item['grant_view']['#default_value'] = 0;
+        $item['grant_view']['#access'] = TRUE;
+        $item['grant_update']['#default_value'] = 0;
+        $item['grant_update']['#access'] = TRUE;
+        $item['grant_delete']['#default_value'] = 0;
+        $item['grant_delete']['#access'] = FALSE;
+        $form['field_pbf_user']['widget'][$key] = $item;
+      }
+    }
+  }
+  if (array_key_exists('field_pbf_role', $form)) {
+    $widget = $form['field_pbf_role']['widget'];
+    foreach ($widget as $key => $item) {
+
+      if (is_numeric($key)) {
+
+        if(strpos($form['#id'], 'node-page-') !== FALSE){
+
+          $item['grant_public']['#default_value'] = 0;
+          $item['grant_public']['#access'] = FALSE;
+          $item['grant_view']['#default_value'] = 0;
+          $item['grant_view']['#access'] = TRUE;
+          $item['grant_update']['#default_value'] = 0;
+          $item['grant_update']['#access'] = TRUE;
+          $item['grant_delete']['#default_value'] = 0;
+          $item['grant_delete']['#access'] = FALSE;
+          $form['field_pbf_role']['widget'][$key] = $item;
+
+        } else {
+
+          $item['grant_public']['#default_value'] = 0;
+          $item['grant_public']['#access'] = FALSE;
+          $item['grant_view']['#default_value'] = 0;
+          $item['grant_view']['#access'] = TRUE;
+          $item['grant_update']['#default_value'] = 0;
+          $item['grant_update']['#access'] = TRUE;
+          $item['grant_delete']['#default_value'] = 0;
+          $item['grant_delete']['#access'] = FALSE;
+          $form['field_pbf_role']['widget'][$key] = $item;
+        }
+      }
+    }
+  }
+}

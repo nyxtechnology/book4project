@@ -1,89 +1,114 @@
 {
-  "name": "nyxtechnology/drupal-project",
-  "description": "Project template for Drupal 9 projects with composer and Docker",
-  "type": "project",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "",
-      "role": ""
-    }
-  ],
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    }
-  ],
-  "require": {
-    "php": "^8.0",
-    "composer/installers": "^2.2.0",
-    "cweagans/composer-patches": "^1.7.3",
-    "drupal/config_partial_export": "^1.6",
-    "drupal/core": "^9.5.9",
-    "drupal/core-composer-scaffold": "^9.5.9",
-    "drupal/graphql": "^4.5",
-    "drupal/pbf": "^1.3",
-    "drush/drush": "^11.5.1",
-    "vlucas/phpdotenv": "^5.5.0",
-    "webflo/drupal-finder": "^1.2.2",
-    "zaporylie/composer-drupal-optimizations": "^1.2.0"
-  },
-  "require-dev": {
-    "drupal/core-dev": "^9.5.9"
-  },
-  "conflict": {
-    "drupal/drupal": "*"
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "config": {
-    "sort-packages": true,
-    "allow-plugins": {
-      "composer/installers": true,
-      "cweagans/composer-patches": true,
-      "drupal/core-composer-scaffold": true,
-      "zaporylie/composer-drupal-optimizations": true,
-      "dealerdirect/phpcodesniffer-composer-installer": true
-    }
-  },
-  "autoload": {
-    "classmap": [
-      "scripts/composer/ScriptHandler.php"
+    "name": "nyxtechnology/book4project",
+    "description": "Nyx docs project template on Drupal",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
     ],
-    "files": ["load.environment.php"]
-  },
-  "scripts": {
-    "pre-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
     ],
-    "pre-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
-    "post-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-    ],
-    "post-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-    ]
-  },
-  "extra": {
-    "composer-exit-on-patch-failure": true,
-    "patchLevel": {
-      "drupal/core": "-p2"
+    "require": {
+        "php": "8.1.12",
+        "composer/installers": "1.12.0",
+        "cweagans/composer-patches": "1.7.3",
+        "drupal/config_partial_export": "1.6",
+        "drupal/console": "1.9.10",
+        "drupal/console-core": "^1.9",
+        "drupal/core": "9.5.9",
+        "drupal/core-composer-scaffold": "9.5.9",
+        "drupal/field_permissions": "^1.2",
+        "drupal/gin": "3.0-rc3",
+        "drupal/graphql": "4.5",
+        "drupal/pbf": "1.3",
+        "drush/drush": "11.6.0",
+        "vlucas/phpdotenv": "5.5.0",
+        "webflo/drupal-finder": "1.2.2",
+        "zaporylie/composer-drupal-optimizations": "1.2.0"
     },
-    "drupal-scaffold": {
-      "locations": {
-        "web-root": "web/"
-      }
+    "require-dev": {
+        "codeception/codeception": "^5.0",
+        "codeception/module-asserts": "3.0",
+        "codeception/module-phpbrowser": "2.5",
+        "codeception/module-webdriver": "3.2.1",
+        "drupal/core-dev": "9.5.9",
+        "stecman/symfony-console-completion": "0.11.0"
     },
-    "installer-paths": {
-      "web/core": ["type:drupal-core"],
-      "web/libraries/{$name}": ["type:drupal-library"],
-      "web/modules/contrib/{$name}": ["type:drupal-module"],
-      "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-      "web/themes/contrib/{$name}": ["type:drupal-theme"],
-      "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "platform-check": false,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "zaporylie/composer-drupal-optimizations": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/console-extend-plugin": true
+        }
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ],
+        "files": [
+            "load.environment.php"
+        ]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
+        }
     }
-  }
 }

@@ -1,0 +1,58 @@
+uuid: 01a9f29e-5e1a-4b2d-9ae9-6aed1094ee3e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pbf_user
+    - node.type.page
+  content:
+    - 'user:user:392f1e2b-c501-4b00-8c77-7ee34cafcf78'
+    - 'user:user:5e10ebf4-f50d-4298-b4fd-1669da0334f6'
+    - 'user:user:f2f97ba4-5c4a-4952-a80c-fa6f3b7ca6d4'
+  module:
+    - pbf
+id: node.page.field_pbf_user
+field_name: field_pbf_user
+entity_type: node
+bundle: page
+label: 'Permissões usuario'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: f2f97ba4-5c4a-4952-a80c-fa6f3b7ca6d4
+    grant_public: 0
+    grant_view: 1
+    grant_update: 1
+    grant_delete: 0
+  -
+    target_uuid: 392f1e2b-c501-4b00-8c77-7ee34cafcf78
+    grant_public: 0
+    grant_view: 1
+    grant_update: 0
+    grant_delete: 0
+  -
+    target_uuid: 5e10ebf4-f50d-4298-b4fd-1669da0334f6
+    grant_public: 0
+    grant_view: 1
+    grant_update: 1
+    grant_delete: 1
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+    filter:
+      type: _none
+    include_anonymous: true
+  priority: 0
+  user_method: user
+  synchronized_with: ''
+  synchronized_by: ''
+  synchronized_from_target: 0
+field_type: pbf
