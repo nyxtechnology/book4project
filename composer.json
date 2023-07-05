@@ -21,6 +21,7 @@
         "cweagans/composer-patches": "1.7.3",
         "drupal/config_partial_export": "1.6",
         "drupal/console": "1.9.10",
+        "drupal/console-core": "^1.9",
         "drupal/core": "9.5.9",
         "drupal/core-composer-scaffold": "9.5.9",
         "drupal/field_permissions": "^1.2",
@@ -33,9 +34,10 @@
         "zaporylie/composer-drupal-optimizations": "1.2.0"
     },
     "require-dev": {
-        "codeception/codeception": "5.0",
+        "codeception/codeception": "^5.0",
         "codeception/module-asserts": "3.0",
         "codeception/module-phpbrowser": "2.5",
+        "codeception/module-webdriver": "3.2.1",
         "drupal/core-dev": "9.5.9",
         "stecman/symfony-console-completion": "0.11.0"
     },
